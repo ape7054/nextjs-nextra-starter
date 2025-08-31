@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 前端远程工作3个月学习任务清单</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .progress-overview {
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .progress-item {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .progress-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .progress-label {
+            font-size: 0.9em;
+            color: #34495e;
+            margin-top: 5px;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .month-section {
+            margin-bottom: 40px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 5px solid #4facfe;
+        }
+
+        .month-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .month-progress {
+            font-size: 0.9em;
+            background: #e9ecef;
+            padding: 5px 10px;
+            border-radius: 15px;
+            color: #6c757d;
+        }
+
+        .week-section {
+            margin: 25px 0;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 3px solid #27ae60;
+        }
+
+        .week-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #27ae60;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .week-progress {
+            font-size: 0.8em;
+            background: #d4edda;
+            color: #155724;
+            padding: 3px 8px;
+            border-radius: 10px;
+        }
+
+        .day-section {
+            margin: 15px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 2px solid #ffc107;
+        }
+
+        .day-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .task-group {
+            margin: 10px 0;
+        }
+
+        .task-group-title {
+            font-size: 1em;
+            font-weight: bold;
+            color: #495057;
+            margin-bottom: 8px;
+        }
+
+        .task-item {
+            display: flex;
+            align-items: flex-start;
+            margin: 8px 0;
+            padding: 5px 0;
+        }
+
+        .task-checkbox {
+            width: 18px;
+            height: 18px;
+            margin-right: 12px;
+            margin-top: 2px;
+            cursor: pointer;
+            accent-color: #27ae60;
+            flex-shrink: 0;
+        }
+
+        .task-text {
+            flex: 1;
+            color: #495057;
+            line-height: 1.4;
+        }
+
+        .task-text.completed {
+            text-decoration: line-through;
+            color: #6c757d;
+            opacity: 0.7;
+        }
+
+        .milestone-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .milestone-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .milestone-item {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+        }
+
+        .milestone-checkbox {
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+            cursor: pointer;
+            accent-color: #ffc107;
+        }
+
+        .action-buttons {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 0 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
+        }
+
+        .stats-section {
+            background: #e9ecef;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .stats-item {
+            display: inline-block;
+            margin: 10px 20px;
+            text-align: center;
+        }
+
+        .stats-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #2c3e50;
+            display: block;
+        }
+
+        .stats-label {
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+
+        .tips-section {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .tips-title {
+            color: #856404;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .tips-content {
+            color: #856404;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 10px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .progress-overview {
+                flex-direction: column;
+            }
+
+            .month-title {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .week-title {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        .project-highlight {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #e74c3c;
+        }
+
+        .project-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .tech-stack {
+            background: #f8f9fa;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            color: #495057;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 前端远程工作3个月学习任务清单</h1>
+            <p>90天冲刺计划 · 每日进步 · 追踪成果</p>
+        </div>
+
+        <div class="progress-overview">
+            <div class="progress-item">
+                <div class="progress-number" id="total-progress">0%</div>
+                <div class="progress-label">总体进度</div>
+            </div>
+            <div class="progress-item">
+                <div class="progress-number" id="completed-tasks">0</div>
+                <div class="progress-label">已完成任务</div>
+            </div>
+            <div class="progress-item">
+                <div class="progress-number" id="total-tasks">0</div>
+                <div class="progress-label">总任务数</div>
+            </div>
+            <div class="progress-item">
+                <div class="progress-number" id="current-day">Day 1</div>
+                <div class="progress-label">当前进度</div>
+            </div>
+        </div>
+
+        <div class="tips-section">
+            <div class="tips-title">💡 使用说明</div>
+            <div class="tips-content">
+                <strong>勾选完成的任务</strong>，系统会自动保存进度到本地存储。建议每天完成当天的任务后就勾选，保持学习节奏。<br>
+                <strong>每周回顾</strong>：查看周进度和里程碑完成情况。<strong>每月总结</strong>：评估月度目标达成度。
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- 第1个月 -->
+            <div class="month-section" id="month-1">
+                <div class="month-title">
+                    🎯 第1个月：React技能突击（Day 1-30）
+                    <div class="month-progress" id="month-1-progress">0% 完成</div>
+                </div>
+
+                <!-- 第1周 -->
+                <div class="week-section" id="week-1">
+                    <div class="week-title">
+                        第1周（Day 1-7）：React基础入门
+                        <div class="week-progress" id="week-1-progress">0/25 任务</div>
+                    </div>
+
+                    <div class="day-section">
+                        <div class="day-title">📅 Day 1-2：环境搭建 + 基础概念</div>
+                        
+                        <div class="task-group">
+                            <div class="task-group-title">上午（2小时）：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day1-2-nodejs" aria-label="任务: 安装Node.js（最新LTS版本）">
+                                <div class="task-text">安装Node.js（最新LTS版本）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day1-2-vscode" aria-label="任务: 安装VSCode + 必备插件：ES7 React/Redux snippets, Prettier, ESLint">
+                                <div class="task-text">安装VSCode + 必备插件：ES7 React/Redux snippets, Prettier, ESLint</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day1-2-concepts" aria-label="任务: 学习React基础概念：组件、JSX、虚拟DOM">
+                                <div class="task-text">学习React基础概念：组件、JSX、虚拟DOM</div>
+                            </div>
+                        </div>
+
+                        <div class="task-group">
+                            <div class="task-group-title">下午（2小时）：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day1-2-project" aria-label="学习任务: 用Vite创建第一个React项目：npm create vite@latest my-react-app --template react">
+                                <div class="task-text">用Vite创建第一个React项目：npm create vite@latest my-react-app --template react</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day1-2-structure" aria-label="学习任务: 理解项目结构：src、public、package.json">
+                                <div class="task-text">理解项目结构：src、public、package.json</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day1-2-hello" aria-label="学习任务: 修改App.js，显示'Hello React'">
+                                <div class="task-text">修改App.js，显示"Hello React"</div>
+                            </div>
+                        </div>
+
+                        <div class="task-group">
+                            <div class="task-group-title">晚上（30分钟）：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day1-2-notes" aria-label="学习任务: 写学习笔记，记录今天学到的概念">
+                                <div class="task-text">写学习笔记，记录今天学到的概念</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day1-2-plan" aria-label="学习任务: 计划明天的学习内容">
+                                <div class="task-text">计划明天的学习内容</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="day-section">
+                        <div class="day-title">📅 Day 3-4：组件与Props</div>
+                        
+                        <div class="task-group">
+                            <div class="task-group-title">学习目标：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day3-4-components" aria-label="学习任务: 创建函数组件和类组件">
+                                <div class="task-text">创建函数组件和类组件</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day3-4-props" aria-label="学习任务: 理解Props传递数据">
+                                <div class="task-text">理解Props传递数据</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day3-4-nesting" aria-label="学习任务: 掌握组件嵌套和复用">
+                                <div class="task-text">掌握组件嵌套和复用</div>
+                            </div>
+                        </div>
+
+                        <div class="task-group">
+                            <div class="task-group-title">实战练习：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day3-4-layout" aria-label="学习任务: 创建Header、Main、Footer组件">
+                                <div class="task-text">创建Header、Main、Footer组件</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day3-4-card" aria-label="学习任务: 制作个人名片组件（传入姓名、职业、头像）">
+                                <div class="task-text">制作个人名片组件（传入姓名、职业、头像）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day3-4-product" aria-label="学习任务: 制作产品卡片组件（传入图片、标题、价格）">
+                                <div class="task-text">制作产品卡片组件（传入图片、标题、价格）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day3-4-code" aria-label="学习任务: 代码量目标：至少写300行代码">
+                                <div class="task-text">代码量目标：至少写300行代码</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="day-section">
+                        <div class="day-title">📅 Day 5-7：State与事件处理</div>
+                        
+                        <div class="task-group">
+                            <div class="task-group-title">学习目标：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day5-7-state" aria-label="学习任务: 理解State概念和使用">
+                                <div class="task-text">理解State概念和使用</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day5-7-events" aria-label="学习任务: 掌握事件处理（onClick、onChange等）">
+                                <div class="task-text">掌握事件处理（onClick、onChange等）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day5-7-forms" aria-label="学习任务: 学会表单控制">
+                                <div class="task-text">学会表单控制</div>
+                            </div>
+                        </div>
+
+                        <div class="project-highlight">
+                            <div class="project-title">项目实战：简单计算器</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day5-7-calc-ui" aria-label="学习任务: 创建计算器UI（数字按钮、运算符、显示屏）">
+                                <div class="task-text">创建计算器UI（数字按钮、运算符、显示屏）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day5-7-calc-logic" aria-label="学习任务: 实现基本运算功能（+、-、×、÷）">
+                                <div class="task-text">实现基本运算功能（+、-、×、÷）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day5-7-calc-clear" aria-label="学习任务: 添加清除和重置功能">
+                                <div class="task-text">添加清除和重置功能</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day5-7-calc-deploy" aria-label="学习任务: 部署到Vercel或Netlify">
+                                <div class="task-text">部署到Vercel或Netlify</div>
+                            </div>
+                        </div>
+
+                        <div class="task-group">
+                            <div class="task-group-title">每日检查清单：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day5-7-git" aria-label="学习任务: 代码提交到GitHub">
+                                <div class="task-text">代码提交到GitHub</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day5-7-summary" aria-label="学习任务: 写学习总结">
+                                <div class="task-text">写学习总结</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day5-7-next-plan" aria-label="学习任务: 明天学习计划确认">
+                                <div class="task-text">明天学习计划确认</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第2周 -->
+                <div class="week-section" id="week-2">
+                    <div class="week-title">
+                        第2周（Day 8-14）：React Hooks深入
+                        <div class="week-progress" id="week-2-progress">0/16 任务</div>
+                    </div>
+
+                    <div class="day-section">
+                        <div class="day-title">📅 Day 8-10：useState和useEffect</div>
+                        
+                        <div class="task-group">
+                            <div class="task-group-title">学习目标：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day8-10-usestate" aria-label="学习任务: 掌握useState管理组件状态">
+                                <div class="task-text">掌握useState管理组件状态</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day8-10-useeffect" aria-label="学习任务: 理解useEffect生命周期">
+                                <div class="task-text">理解useEffect生命周期</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day8-10-cleanup" aria-label="学习任务: 学会处理副作用和清理">
+                                <div class="task-text">学会处理副作用和清理</div>
+                            </div>
+                        </div>
+
+                        <div class="task-group">
+                            <div class="task-group-title">实战练习：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day8-10-counter" aria-label="学习任务: 制作计数器（useState）">
+                                <div class="task-text">制作计数器（useState）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day8-10-clock" aria-label="学习任务: 制作时钟组件（useEffect + setInterval）">
+                                <div class="task-text">制作时钟组件（useEffect + setInterval）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="day8-10-fetch" aria-label="学习任务: 制作数据获取组件（useEffect + fetch）">
+                                <div class="task-text">制作数据获取组件（useEffect + fetch）</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="day-section">
+                        <div class="day-title">📅 Day 11-14：Todo App项目</div>
+                        
+                        <div class="project-highlight">
+                            <div class="project-title">核心作品集项目：Todo应用</div>
+                            <div class="tech-stack">技术栈：React Hooks (useState, useEffect) + CSS Modules + LocalStorage API</div>
+                            
+                            <div class="task-group">
+                                <div class="task-group-title">项目要求：</div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="todo-add" aria-label="学习任务: 添加新的todo项">
+                                    <div class="task-text">添加新的todo项</div>
+                                </div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="todo-toggle" aria-label="学习任务: 标记todo为完成/未完成">
+                                    <div class="task-text">标记todo为完成/未完成</div>
+                                </div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="todo-delete" aria-label="学习任务: 删除todo项">
+                                    <div class="task-text">删除todo项</div>
+                                </div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="todo-filter" aria-label="学习任务: 筛选显示（全部/已完成/未完成）">
+                                    <div class="task-text">筛选显示（全部/已完成/未完成）</div>
+                                </div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="todo-storage" aria-label="学习任务: 本地存储（localStorage）">
+                                    <div class="task-text">本地存储（localStorage）</div>
+                                </div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="todo-responsive" aria-label="学习任务: 响应式设计（移动端适配）">
+                                    <div class="task-text">响应式设计（移动端适配）</div>
+                                </div>
+                            </div>
+
+                            <div class="task-group">
+                                <div class="task-group-title">项目交付物：</div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="todo-github" aria-label="学习任务: 完整的GitHub仓库">
+                                    <div class="task-text">完整的GitHub仓库</div>
+                                </div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="todo-readme" aria-label="学习任务: 详细的README文档">
+                                    <div class="task-text">详细的README文档</div>
+                                </div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="todo-deploy" aria-label="学习任务: 在线演示链接">
+                                    <div class="task-text">在线演示链接</div>
+                                </div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="todo-screenshots" aria-label="学习任务: 项目截图和功能说明">
+                                    <div class="task-text">项目截图和功能说明</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第3周 -->
+                <div class="week-section" id="week-3">
+                    <div class="week-title">
+                        第3周（Day 15-21）：React Router与API集成
+                        <div class="week-progress" id="week-3-progress">0/12 任务</div>
+                    </div>
+
+                    <div class="day-section">
+                        <div class="day-title">📅 Day 15-16：React Router</div>
+                        
+                        <div class="task-group">
+                            <div class="task-group-title">学习目标：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="router-install" aria-label="学习任务: 安装和配置React Router">
+                                <div class="task-text">安装和配置React Router</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="router-pages" aria-label="学习任务: 创建多页面应用">
+                                <div class="task-text">创建多页面应用</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="router-params" aria-label="学习任务: 掌握路由导航和参数传递">
+                                <div class="task-text">掌握路由导航和参数传递</div>
+                            </div>
+                        </div>
+
+                        <div class="task-group">
+                            <div class="task-group-title">实战练习：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="router-blog" aria-label="学习任务: 制作个人博客导航（首页、关于、文章列表、联系）">
+                                <div class="task-text">制作个人博客导航（首页、关于、文章列表、联系）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="router-nested" aria-label="学习任务: 实现嵌套路由和动态路由">
+                                <div class="task-text">实现嵌套路由和动态路由</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="router-404" aria-label="学习任务: 添加404页面">
+                                <div class="task-text">添加404页面</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="day-section">
+                        <div class="day-title">📅 Day 17-19：API调用与状态管理</div>
+                        
+                        <div class="task-group">
+                            <div class="task-group-title">学习目标：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="api-axios" aria-label="学习任务: 使用Axios进行HTTP请求">
+                                <div class="task-text">使用Axios进行HTTP请求</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="api-loading" aria-label="学习任务: 处理Loading状态和错误处理">
+                                <div class="task-text">处理Loading状态和错误处理</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="api-context" aria-label="学习任务: 学习Context API进行状态管理">
+                                <div class="task-text">学习Context API进行状态管理</div>
+                            </div>
+                        </div>
+
+                        <div class="task-group">
+                            <div class="task-group-title">实战练习：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="api-jsonplaceholder" aria-label="学习任务: 调用免费API（如JSONPlaceholder）">
+                                <div class="task-text">调用免费API（如JSONPlaceholder）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="api-userlist" aria-label="学习任务: 显示用户列表和详情页">
+                                <div class="task-text">显示用户列表和详情页</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="api-search" aria-label="学习任务: 实现搜索和筛选功能">
+                                <div class="task-text">实现搜索和筛选功能</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="day-section">
+                        <div class="day-title">📅 Day 20-21：项目整合与优化</div>
+                        
+                        <div class="task-item">
+                            <input type="checkbox" class="task-checkbox" data-task="optimize-todo" aria-label="学习任务: 完善Todo App，添加API集成">
+                            <div class="task-text">完善Todo App，添加API集成</div>
+                        </div>
+                        <div class="task-item">
+                            <input type="checkbox" class="task-checkbox" data-task="optimize-performance" aria-label="学习任务: 性能优化：React.memo、useMemo">
+                            <div class="task-text">性能优化：React.memo、useMemo</div>
+                        </div>
+                        <div class="task-item">
+                            <input type="checkbox" class="task-checkbox" data-task="optimize-refactor" aria-label="学习任务: 代码重构和组件拆分">
+                            <div class="task-text">代码重构和组件拆分</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第4周 -->
+                <div class="week-section" id="week-4">
+                    <div class="week-title">
+                        第4周（Day 22-30）：第一个作品集项目
+                        <div class="week-progress" id="week-4-progress">0/10 任务</div>
+                    </div>
+
+                    <div class="project-highlight">
+                        <div class="project-title">项目：电商产品展示页</div>
+                        <div class="tech-stack">技术栈：React + React Router + Axios (Fake Store API) + CSS-in-JS (styled-components) + Context API</div>
+                        
+                        <div class="task-group">
+                            <div class="task-group-title">功能要求：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="ecom-list" aria-label="学习任务: 产品列表展示（网格布局）">
+                                <div class="task-text">产品列表展示（网格布局）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="ecom-detail" aria-label="学习任务: 产品详情页面">
+                                <div class="task-text">产品详情页面</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="ecom-search" aria-label="学习任务: 搜索和分类筛选">
+                                <div class="task-text">搜索和分类筛选</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="ecom-cart" aria-label="学习任务: 购物车功能（添加、删除、数量修改）">
+                                <div class="task-text">购物车功能（添加、删除、数量修改）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="ecom-responsive" aria-label="学习任务: 响应式设计">
+                                <div class="task-text">响应式设计</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="ecom-ux" aria-label="学习任务: 完整的用户体验">
+                                <div class="task-text">完整的用户体验</div>
+                            </div>
+                        </div>
+
+                        <div class="task-group">
+                            <div class="task-group-title">项目里程碑：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="ecom-ui-design" aria-label="学习任务: Day 22-24: UI设计和组件拆分">
+                                <div class="task-text">Day 22-24: UI设计和组件拆分</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="ecom-api" aria-label="学习任务: Day 25-26: API集成和数据获取">
+                                <div class="task-text">Day 25-26: API集成和数据获取</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="ecom-cart-impl" aria-label="学习任务: Day 27-28: 购物车功能实现">
+                                <div class="task-text">Day 27-28: 购物车功能实现</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="ecom-deploy" aria-label="学习任务: Day 29-30: 优化和部署">
+                                <div class="task-text">Day 29-30: 优化和部署</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第1个月里程碑 -->
+                <div class="milestone-section">
+                    <div class="milestone-title">🏆 第1个月末检验</div>
+                    <div class="milestone-item">
+                        <input type="checkbox" class="milestone-checkbox" data-milestone="month1-react-basics" aria-label="里程碑: React基础概念全部掌握">
+                        <div>✅ React基础概念全部掌握</div>
+                    </div>
+                    <div class="milestone-item">
+                        <input type="checkbox" class="milestone-checkbox" data-milestone="month1-todo-app" aria-label="里程碑: 独立完成Todo App项目">
+                        <div>✅ 独立完成Todo App项目</div>
+                    </div>
+                    <div class="milestone-item">
+                        <input type="checkbox" class="milestone-checkbox" data-milestone="month1-api-router" aria-label="里程碑: 掌握API调用和路由管理">
+                        <div>✅ 掌握API调用和路由管理</div>
+                    </div>
+                    <div class="milestone-item">
+                        <input type="checkbox" class="milestone-checkbox" data-milestone="month1-github" aria-label="里程碑: GitHub提交记录≥20次">
+                        <div>✅ GitHub提交记录≥20次</div>
+                    </div>
+                    <div class="milestone-item">
+                        <input type="checkbox" class="milestone-checkbox" data-milestone="month1-portfolio" aria-label="里程碑: 第一个作品集项目上线">
+                        <div>✅ 第一个作品集项目上线</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第2个月 -->
+            <div class="month-section" id="month-2">
+                <div class="month-title">
+                    🛠️ 第2个月：工程化技能与作品集（Day 31-60）
+                    <div class="month-progress" id="month-2-progress">0% 完成</div>
+                </div>
+
+                <!-- 第5周 -->
+                <div class="week-section" id="week-5">
+                    <div class="week-title">
+                        第5周（Day 31-37）：TypeScript入门
+                        <div class="week-progress" id="week-5-progress">0/11 任务</div>
+                    </div>
+
+                    <div class="day-section">
+                        <div class="day-title">📅 Day 31-33：TypeScript基础</div>
+                        
+                        <div class="task-group">
+                            <div class="task-group-title">学习目标：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="ts-install" aria-label="学习任务: 安装和配置TypeScript">
+                                <div class="task-text">安装和配置TypeScript</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="ts-basic-types" aria-label="学习任务: 基本类型：string, number, boolean, array, object">
+                                <div class="task-text">基本类型：string, number, boolean, array, object</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="ts-interface" aria-label="学习任务: 接口（Interface）和类型别名（Type）">
+                                <div class="task-text">接口（Interface）和类型别名（Type）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="ts-functions" aria-label="学习任务: 函数类型和可选参数">
+                                <div class="task-text">函数类型和可选参数</div>
+                            </div>
+                        </div>
+
+                        <div class="task-group">
+                            <div class="task-group-title">实战练习：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="ts-migrate-todo" aria-label="学习任务: 将之前的Todo App迁移到TypeScript">
+                                <div class="task-text">将之前的Todo App迁移到TypeScript</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="ts-props-types" aria-label="学习任务: 为所有Props定义接口">
+                                <div class="task-text">为所有Props定义接口</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="ts-api-types" aria-label="学习任务: 为API响应数据定义类型">
+                                <div class="task-text">为API响应数据定义类型</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="day-section">
+                        <div class="day-title">📅 Day 34-37：React + TypeScript</div>
+                        
+                        <div class="task-group">
+                            <div class="task-group-title">学习目标：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="react-ts-components" aria-label="学习任务: React组件的TypeScript写法">
+                                <div class="task-text">React组件的TypeScript写法</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="react-ts-props-state" aria-label="学习任务: Props和State的类型定义">
+                                <div class="task-text">Props和State的类型定义</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="react-ts-events" aria-label="学习任务: 事件处理的类型">
+                                <div class="task-text">事件处理的类型</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="react-ts-hooks" aria-label="学习任务: Hooks的TypeScript用法">
+                                <div class="task-text">Hooks的TypeScript用法</div>
+                            </div>
+                        </div>
+
+                        <div class="project-highlight">
+                            <div class="project-title">项目实战：类型安全的天气应用</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="weather-api" aria-label="学习任务: 调用天气API（OpenWeatherMap）">
+                                <div class="task-text">调用天气API（OpenWeatherMap）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="weather-types" aria-label="学习任务: 完整的TypeScript类型定义">
+                                <div class="task-text">完整的TypeScript类型定义</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="weather-error" aria-label="学习任务: 错误处理和Loading状态">
+                                <div class="task-text">错误处理和Loading状态</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="weather-search" aria-label="学习任务: 城市搜索和收藏功能">
+                                <div class="task-text">城市搜索和收藏功能</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第6周 -->
+                <div class="week-section" id="week-6">
+                    <div class="week-title">
+                        第6周（Day 38-44）：测试与代码质量
+                        <div class="week-progress" id="week-6-progress">0/12 任务</div>
+                    </div>
+
+                    <div class="day-section">
+                        <div class="day-title">📅 Day 38-40：单元测试</div>
+                        
+                        <div class="task-group">
+                            <div class="task-group-title">学习目标：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="jest-basics" aria-label="学习任务: Jest基础和配置">
+                                <div class="task-text">Jest基础和配置</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="rtl-basics" aria-label="学习任务: React Testing Library">
+                                <div class="task-text">React Testing Library</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="component-tests" aria-label="学习任务: 组件测试和快照测试">
+                                <div class="task-text">组件测试和快照测试</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="api-mock-tests" aria-label="学习任务: 模拟API调用测试">
+                                <div class="task-text">模拟API调用测试</div>
+                            </div>
+                        </div>
+
+                        <div class="task-group">
+                            <div class="task-group-title">实战练习：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="todo-tests" aria-label="学习任务: 为Todo App编写测试用例">
+                                <div class="task-text">为Todo App编写测试用例</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="render-tests" aria-label="学习任务: 测试组件渲染">
+                                <div class="task-text">测试组件渲染</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="interaction-tests" aria-label="学习任务: 测试用户交互（点击、输入）">
+                                <div class="task-text">测试用户交互（点击、输入）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="api-error-tests" aria-label="学习任务: 测试API调用和错误处理">
+                                <div class="task-text">测试API调用和错误处理</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="day-section">
+                        <div class="day-title">📅 Day 41-44：代码规范与Git工作流</div>
+                        
+                        <div class="task-group">
+                            <div class="task-group-title">学习目标：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="eslint-config" aria-label="学习任务: ESLint配置和规则">
+                                <div class="task-text">ESLint配置和规则</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="prettier-config" aria-label="学习任务: Prettier代码格式化">
+                                <div class="task-text">Prettier代码格式化</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="pre-commit" aria-label="学习任务: Pre-commit hooks（husky + lint-staged）">
+                                <div class="task-text">Pre-commit hooks（husky + lint-staged）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="git-workflow" aria-label="学习任务: Git工作流：feature分支、PR流程">
+                                <div class="task-text">Git工作流：feature分支、PR流程</div>
+                            </div>
+                        </div>
+
+                        <div class="task-group">
+                            <div class="task-group-title">实战练习：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="toolchain-config" aria-label="学习任务: 配置完整的代码规范工具链">
+                                <div class="task-text">配置完整的代码规范工具链</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="github-workflow" aria-label="学习任务: 学习GitHub工作流">
+                                <div class="task-text">学习GitHub工作流</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="open-source-pr" aria-label="学习任务: 给开源项目提交PR（文档修复或小功能）">
+                                <div class="task-text">给开源项目提交PR（文档修复或小功能）</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第7周 -->
+                <div class="week-section" id="week-7">
+                    <div class="week-title">
+                        第7周（Day 45-51）：高级React技能
+                        <div class="week-progress" id="week-7-progress">0/10 任务</div>
+                    </div>
+
+                    <div class="day-section">
+                        <div class="day-title">📅 Day 45-47：状态管理进阶</div>
+                        
+                        <div class="task-group">
+                            <div class="task-group-title">学习目标：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="redux-toolkit" aria-label="学习任务: Redux Toolkit基础">
+                                <div class="task-text">Redux Toolkit基础</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="use-reducer" aria-label="学习任务: useReducer和复杂状态管理">
+                                <div class="task-text">useReducer和复杂状态管理</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="performance-opt" aria-label="学习任务: 性能优化：React.memo, useMemo, useCallback">
+                                <div class="task-text">性能优化：React.memo, useMemo, useCallback</div>
+                            </div>
+                        </div>
+
+                        <div class="task-group">
+                            <div class="task-group-title">实战练习：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="redux-cart" aria-label="学习任务: 用Redux Toolkit重构购物车应用">
+                                <div class="task-text">用Redux Toolkit重构购物车应用</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="complex-state" aria-label="学习任务: 实现复杂的状态逻辑">
+                                <div class="task-text">实现复杂的状态逻辑</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="performance-test" aria-label="学习任务: 性能测试和优化">
+                                <div class="task-text">性能测试和优化</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="day-section">
+                        <div class="day-title">📅 Day 48-51：组件库与设计系统</div>
+                        
+                        <div class="task-group">
+                            <div class="task-group-title">学习目标：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="ui-library" aria-label="学习任务: Ant Design或Material-UI使用">
+                                <div class="task-text">Ant Design或Material-UI使用</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="theme-custom" aria-label="学习任务: 主题定制和样式覆盖">
+                                <div class="task-text">主题定制和样式覆盖</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="responsive-best" aria-label="学习任务: 响应式设计最佳实践">
+                                <div class="task-text">响应式设计最佳实践</div>
+                            </div>
+                        </div>
+
+                        <div class="project-highlight">
+                            <div class="project-title">项目实战：管理后台界面</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="admin-ui" aria-label="学习任务: 使用Ant Design构建后台界面">
+                                <div class="task-text">使用Ant Design构建后台界面</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="complex-components" aria-label="学习任务: 实现表格、表单、图表等复杂组件">
+                                <div class="task-text">实现表格、表单、图表等复杂组件</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="auth-routing" aria-label="学习任务: 权限管理和路由守卫">
+                                <div class="task-text">权限管理和路由守卫</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第8周 -->
+                <div class="week-section" id="week-8">
+                    <div class="week-title">
+                        第8周（Day 52-60）：作品集项目2 & 3
+                        <div class="week-progress" id="week-8-progress">0/12 任务</div>
+                    </div>
+
+                    <div class="project-highlight">
+                        <div class="project-title">项目2：数据可视化面板（Day 52-56）</div>
+                        <div class="tech-stack">技术栈：React + TypeScript + Recharts/Chart.js + WebSocket + Styled-components</div>
+                        
+                        <div class="task-group">
+                            <div class="task-group-title">功能要求：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="dashboard-charts" aria-label="学习任务: 多种图表展示（折线图、柱状图、饼图）">
+                                <div class="task-text">多种图表展示（折线图、柱状图、饼图）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="dashboard-realtime" aria-label="学习任务: 实时数据更新">
+                                <div class="task-text">实时数据更新</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="dashboard-responsive" aria-label="学习任务: 响应式布局">
+                                <div class="task-text">响应式布局</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="dashboard-filter" aria-label="学习任务: 数据筛选和交互">
+                                <div class="task-text">数据筛选和交互</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-highlight">
+                        <div class="project-title">项目3：社交媒体前端（Day 57-60）</div>
+                        <div class="tech-stack">技术栈：React + TypeScript + Redux Toolkit + React Router v6 + Ant Design + json-server</div>
+                        
+                        <div class="task-group">
+                            <div class="task-group-title">功能要求：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="social-auth" aria-label="学习任务: 用户认证（登录/注册）">
+                                <div class="task-text">用户认证（登录/注册）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="social-post" aria-label="学习任务: 发布动态（文字、图片）">
+                                <div class="task-text">发布动态（文字、图片）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="social-interact" aria-label="学习任务: 点赞、评论、分享">
+                                <div class="task-text">点赞、评论、分享</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="social-profile" aria-label="学习任务: 用户个人页面">
+                                <div class="task-text">用户个人页面</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="social-responsive" aria-label="学习任务: 响应式设计">
+                                <div class="task-text">响应式设计</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第2个月里程碑 -->
+                <div class="milestone-section">
+                    <div class="milestone-title">🏆 第2个月末检验</div>
+                    <div class="milestone-item">
+                        <input type="checkbox" class="milestone-checkbox" data-milestone="month2-typescript" aria-label="里程碑: TypeScript在React中熟练应用">
+                        <div>✅ TypeScript在React中熟练应用</div>
+                    </div>
+                    <div class="milestone-item">
+                        <input type="checkbox" class="milestone-checkbox" data-milestone="month2-testing" aria-label="里程碑: 掌握测试和代码规范">
+                        <div>✅ 掌握测试和代码规范</div>
+                    </div>
+                    <div class="milestone-item">
+                        <input type="checkbox" class="milestone-checkbox" data-milestone="month2-projects" aria-label="里程碑: 3个作品集项目全部完成">
+                        <div>✅ 3个作品集项目全部完成</div>
+                    </div>
+                    <div class="milestone-item">
+                        <input type="checkbox" class="milestone-checkbox" data-milestone="month2-portfolio" aria-label="里程碑: 个人作品集网站上线">
+                        <div>✅ 个人作品集网站上线</div>
+                    </div>
+                    <div class="milestone-item">
+                        <input type="checkbox" class="milestone-checkbox" data-milestone="month2-blog" aria-label="里程碑: 技术博客至少2篇">
+                        <div>✅ 技术博客至少2篇</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第3个月 -->
+            <div class="month-section" id="month-3">
+                <div class="month-title">
+                    💼 第3个月：求职冲刺与面试准备（Day 61-90）
+                    <div class="month-progress" id="month-3-progress">0% 完成</div>
+                </div>
+
+                <!-- 第9周 -->
+                <div class="week-section" id="week-9">
+                    <div class="week-title">
+                        第9周（Day 61-67）：作品集完善
+                        <div class="week-progress" id="week-9-progress">0/9 任务</div>
+                    </div>
+
+                    <div class="day-section">
+                        <div class="day-title">📅 Day 61-63：项目收尾与优化</div>
+                        
+                        <div class="task-item">
+                            <input type="checkbox" class="task-checkbox" data-task="projects-polish" aria-label="学习任务: 3个项目的功能完善和bug修复">
+                            <div class="task-text">3个项目的功能完善和bug修复</div>
+                        </div>
+                        <div class="task-item">
+                            <input type="checkbox" class="task-checkbox" data-task="performance-opt-final" aria-label="学习任务: 性能优化：代码分割、懒加载">
+                            <div class="task-text">性能优化：代码分割、懒加载</div>
+                        </div>
+                        <div class="task-item">
+                            <input type="checkbox" class="task-checkbox" data-task="seo-opt" aria-label="学习任务: SEO优化：meta标签、sitemap">
+                            <div class="task-text">SEO优化：meta标签、sitemap</div>
+                        </div>
+                        <div class="task-item">
+                            <input type="checkbox" class="task-checkbox" data-task="mobile-test" aria-label="学习任务: 移动端适配测试">
+                            <div class="task-text">移动端适配测试</div>
+                        </div>
+                    </div>
+
+                    <div class="day-section">
+                        <div class="day-title">📅 Day 64-67：作品集网站搭建</div>
+                        
+                        <div class="project-highlight">
+                            <div class="project-title">个人作品集网站</div>
+                            <div class="tech-stack">技术栈：Next.js + TypeScript (SSG) + Tailwind CSS + Vercel部署</div>
+                            
+                            <div class="task-group">
+                                <div class="task-group-title">网站要求：</div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="portfolio-intro" aria-label="学习任务: 个人简介和技能展示">
+                                    <div class="task-text">个人简介和技能展示</div>
+                                </div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="portfolio-projects" aria-label="学习任务: 3个项目的详细介绍">
+                                    <div class="task-text">3个项目的详细介绍</div>
+                                </div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="portfolio-demos" aria-label="学习任务: 每个项目的演示视频（2-3分钟）">
+                                    <div class="task-text">每个项目的演示视频（2-3分钟）</div>
+                                </div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="portfolio-blog" aria-label="学习任务: 技术博客或学习笔记">
+                                    <div class="task-text">技术博客或学习笔记</div>
+                                </div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="portfolio-contact" aria-label="学习任务: 联系方式和简历下载">
+                                    <div class="task-text">联系方式和简历下载</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第10周 -->
+                <div class="week-section" id="week-10">
+                    <div class="week-title">
+                        第10周（Day 68-74）：简历与面试准备
+                        <div class="week-progress" id="week-10-progress">0/12 任务</div>
+                    </div>
+
+                    <div class="day-section">
+                        <div class="day-title">📅 Day 68-70：简历优化</div>
+                        
+                        <div class="task-group">
+                            <div class="task-group-title">简历要点：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="resume-react-skills" aria-label="学习任务: 突出React技能和项目经验">
+                                <div class="task-text">突出React技能和项目经验</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="resume-metrics" aria-label="学习任务: 量化成果（如'性能优化30%'、'用户体验提升'）">
+                                <div class="task-text">量化成果（如"性能优化30%"、"用户体验提升"）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="resume-tech-stack" aria-label="学习任务: 技术栈清单：React, TypeScript, Redux, Jest等">
+                                <div class="task-text">技术栈清单：React, TypeScript, Redux, Jest等</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="resume-links" aria-label="学习任务: 开源贡献和技术博客链接">
+                                <div class="task-text">开源贡献和技术博客链接</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="resume-english" aria-label="学习任务: 英文版本简历">
+                                <div class="task-text">英文版本简历</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="day-section">
+                        <div class="day-title">📅 Day 71-74：面试准备</div>
+                        
+                        <div class="task-group">
+                            <div class="task-group-title">技术面试准备：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="interview-react-core" aria-label="学习任务: React核心概念（生命周期、Hooks、性能优化）">
+                                <div class="task-text">React核心概念（生命周期、Hooks、性能优化）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="interview-js-deep" aria-label="学习任务: JavaScript深入（闭包、原型链、异步编程）">
+                                <div class="task-text">JavaScript深入（闭包、原型链、异步编程）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="interview-algorithms" aria-label="学习任务: 算法和数据结构基础">
+                                <div class="task-text">算法和数据结构基础</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="interview-system-design" aria-label="学习任务: 系统设计基础（如何设计一个Todo应用）">
+                                <div class="task-text">系统设计基础（如何设计一个Todo应用）</div>
+                            </div>
+                        </div>
+
+                        <div class="task-group">
+                            <div class="task-group-title">常见面试题练习：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="interview-usestate" aria-label="学习任务: 手写实现useState">
+                                <div class="task-text">手写实现useState</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="interview-performance" aria-label="学习任务: React性能优化方法">
+                                <div class="task-text">React性能优化方法</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="interview-component-design" aria-label="学习任务: 组件设计原则">
+                                <div class="task-text">组件设计原则</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="interview-security" aria-label="学习任务: 前端安全和最佳实践">
+                                <div class="task-text">前端安全和最佳实践</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第11周 -->
+                <div class="week-section" id="week-11">
+                    <div class="week-title">
+                        第11周（Day 75-81）：求职平台注册与简历投递
+                        <div class="week-progress" id="week-11-progress">0/13 任务</div>
+                    </div>
+
+                    <div class="day-section">
+                        <div class="day-title">📅 Day 75-76：平台注册与资料完善</div>
+                        
+                        <div class="task-group">
+                            <div class="task-group-title">国际远程工作平台：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="platform-upwork" aria-label="学习任务: Upwork: 完善profile，添加技能测试">
+                                <div class="task-text">Upwork: 完善profile，添加技能测试</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="platform-toptal" aria-label="学习任务: Toptal: 提交申请，准备筛选面试">
+                                <div class="task-text">Toptal: 提交申请，准备筛选面试</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="platform-freelancer" aria-label="学习任务: Freelancer: 注册并投标简单项目">
+                                <div class="task-text">Freelancer: 注册并投标简单项目</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="platform-angellist" aria-label="学习任务: AngelList: 关注初创公司全职机会">
+                                <div class="task-text">AngelList: 关注初创公司全职机会</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="platform-wwr" aria-label="学习任务: We Work Remotely: 浏览最新职位">
+                                <div class="task-text">We Work Remotely: 浏览最新职位</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="platform-remote" aria-label="学习任务: Remote.co: 设置求职alert">
+                                <div class="task-text">Remote.co: 设置求职alert</div>
+                            </div>
+                        </div>
+
+                        <div class="task-group">
+                            <div class="task-group-title">国内平台：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="platform-boss" aria-label="学习任务: BOSS直聘: 设置远程工作筛选">
+                                <div class="task-text">BOSS直聘: 设置远程工作筛选</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="platform-lagou" aria-label="学习任务: 拉勾网: 关注互联网公司远程岗位">
+                                <div class="task-text">拉勾网: 关注互联网公司远程岗位</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="platform-yjsong" aria-label="学习任务: 猿急送: 注册成为技术服务者">
+                                <div class="task-text">猿急送: 注册成为技术服务者</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="day-section">
+                        <div class="day-title">📅 Day 77-81：简历投递策略</div>
+                        
+                        <div class="task-group">
+                            <div class="task-group-title">每日投递计划：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="daily-job-search" aria-label="学习任务: 筛选10-15个合适职位">
+                                <div class="task-text">筛选10-15个合适职位</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="customize-resume" aria-label="学习任务: 定制化简历和求职信">
+                                <div class="task-text">定制化简历和求职信</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="follow-up" aria-label="学习任务: 跟进已投递的职位">
+                                <div class="task-text">跟进已投递的职位</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="track-applications" aria-label="学习任务: 记录投递情况和反馈">
+                                <div class="task-text">记录投递情况和反馈</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第12周 -->
+                <div class="week-section" id="week-12">
+                    <div class="week-title">
+                        第12周（Day 82-90）：面试冲刺与Offer获取
+                        <div class="week-progress" id="week-12-progress">0/12 任务</div>
+                    </div>
+
+                    <div class="day-section">
+                        <div class="day-title">📅 Day 82-85：面试实战</div>
+                        
+                        <div class="task-group">
+                            <div class="task-group-title">面试准备清单：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="mock-interview" aria-label="学习任务: 技术面试mock（找朋友或用平台练习）">
+                                <div class="task-text">技术面试mock（找朋友或用平台练习）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="project-demo" aria-label="学习任务: 项目演示准备（5分钟快速展示）">
+                                <div class="task-text">项目演示准备（5分钟快速展示）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="english-practice" aria-label="学习任务: 英语口语练习（技术词汇和日常交流）">
+                                <div class="task-text">英语口语练习（技术词汇和日常交流）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="remote-experience" aria-label="学习任务: 远程工作经验准备（时间管理、沟通方式）">
+                                <div class="task-text">远程工作经验准备（时间管理、沟通方式）</div>
+                            </div>
+                        </div>
+
+                        <div class="task-group">
+                            <div class="task-group-title">每次面试后总结：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="interview-notes" aria-label="学习任务: 记录面试问题和回答">
+                                <div class="task-text">记录面试问题和回答</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="interview-improvement" aria-label="学习任务: 总结改进点">
+                                <div class="task-text">总结改进点</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="update-materials" aria-label="学习任务: 更新准备材料">
+                                <div class="task-text">更新准备材料</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="day-section">
+                        <div class="day-title">📅 Day 86-90：Offer谈判与入职准备</div>
+                        
+                        <div class="task-group">
+                            <div class="task-group-title">Offer评估标准：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="salary-evaluation" aria-label="学习任务: 薪资水平（参考市场价格）">
+                                <div class="task-text">薪资水平（参考市场价格）</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="work-schedule" aria-label="学习任务: 工作时间和时区要求">
+                                <div class="task-text">工作时间和时区要求</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="growth-opportunity" aria-label="学习任务: 项目类型和成长机会">
+                                <div class="task-text">项目类型和成长机会</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="company-culture" aria-label="学习任务: 公司文化和团队氛围">
+                                <div class="task-text">公司文化和团队氛围</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="contract-terms" aria-label="学习任务: 合同条款和福利">
+                                <div class="task-text">合同条款和福利</div>
+                            </div>
+                        </div>
+
+                        <div class="task-group">
+                            <div class="task-group-title">入职准备：</div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="work-environment" aria-label="学习任务: 工作环境搭建">
+                                <div class="task-text">工作环境搭建</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="remote-tools" aria-label="学习任务: 远程协作工具熟悉">
+                                <div class="task-text">远程协作工具熟悉</div>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" class="task-checkbox" data-task="time-management" aria-label="学习任务: 时间管理和自律计划">
+                                <div class="task-text">时间管理和自律计划</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第3个月里程碑 -->
+                <div class="milestone-section">
+                    <div class="milestone-title">🏆 第3个月末目标</div>
+                    <div class="milestone-item">
+                        <input type="checkbox" class="milestone-checkbox" data-milestone="month3-applications" aria-label="里程碑: 简历投递≥100份">
+                        <div>✅ 简历投递≥100份</div>
+                    </div>
+                    <div class="milestone-item">
+                        <input type="checkbox" class="milestone-checkbox" data-milestone="month3-interviews" aria-label="里程碑: 获得面试机会≥10个">
+                        <div>✅ 获得面试机会≥10个</div>
+                    </div>
+                    <div class="milestone-item">
+                        <input type="checkbox" class="milestone-checkbox" data-milestone="month3-tech-pass" aria-label="里程碑: 通过技术面试≥3个">
+                        <div>✅ 通过技术面试≥3个</div>
+                    </div>
+                    <div class="milestone-item">
+                        <input type="checkbox" class="milestone-checkbox" data-milestone="month3-offer" aria-label="里程碑: 获得至少1个工作Offer">
+                        <div>✅ 获得至少1个工作Offer</div>
+                    </div>
+                    <div class="milestone-item">
+                        <input type="checkbox" class="milestone-checkbox" data-milestone="month3-job" aria-label="里程碑: 成功入职远程前端岗位">
+                        <div>✅ 成功入职远程前端岗位</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <h3 style="margin-bottom: 20px;">📈 学习统计</h3>
+            <div class="stats-item">
+                <span class="stats-number" id="days-passed">1</span>
+                <div class="stats-label">已学习天数</div>
+            </div>
+            <div class="stats-item">
+                <span class="stats-number" id="completion-rate">0%</span>
+                <div class="stats-label">完成率</div>
+            </div>
+            <div class="stats-item">
+                <span class="stats-number" id="projects-completed">0</span>
+                <div class="stats-label">项目完成</div>
+            </div>
+            <div class="stats-item">
+                <span class="stats-number" id="milestones-achieved">0</span>
+                <div class="stats-label">里程碑达成</div>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button class="btn" onclick="exportProgress()">📋 导出进度</button>
+            <button class="btn btn-secondary" onclick="saveProgress()">💾 保存进度</button>
+            <button class="btn btn-danger" onclick="resetProgress()">🔄 重置进度</button>
+        </div>
+    </div>
+
+    <script>
+        // 初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProgress();
+            updateAllProgress();
+            
+            // 添加事件监听器
+            document.querySelectorAll('.task-checkbox, .milestone-checkbox').forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    saveProgress();
+                    updateAllProgress();
+                });
+            });
+        });
+
+        // 更新所有进度
+        function updateAllProgress() {
+            updateOverallProgress();
+            updateMonthProgress();
+            updateWeekProgress();
+            updateStats();
+        }
+
+        // 更新总体进度
+        function updateOverallProgress() {
+            const allTasks = document.querySelectorAll('.task-checkbox');
+            const completedTasks = document.querySelectorAll('.task-checkbox:checked');
+            
+            const totalTasks = allTasks.length;
+            const completed = completedTasks.length;
+            const percentage = Math.round((completed / totalTasks) * 100);
+            
+            document.getElementById('total-progress').textContent = percentage + '%';
+            document.getElementById('completed-tasks').textContent = completed;
+            document.getElementById('total-tasks').textContent = totalTasks;
+            
+            // 更新文本状态
+            allTasks.forEach(checkbox => {
+                const textElement = checkbox.nextElementSibling;
+                if (checkbox.checked) {
+                    textElement.classList.add('completed');
+                } else {
+                    textElement.classList.remove('completed');
+                }
+            });
+        }
+
+        // 更新月份进度
+        function updateMonthProgress() {
+            for (let i = 1; i <= 3; i++) {
+                const monthSection = document.getElementById(`month-${i}`);
+                const tasks = monthSection.querySelectorAll('.task-checkbox');
+                const completed = monthSection.querySelectorAll('.task-checkbox:checked');
+                
+                const percentage = Math.round((completed.length / tasks.length) * 100);
+                document.getElementById(`month-${i}-progress`).textContent = percentage + '% 完成';
+            }
+        }
+
+        // 更新周进度
+        function updateWeekProgress() {
+            for (let i = 1; i <= 12; i++) {
+                const weekElement = document.getElementById(`week-${i}`);
+                if (weekElement) {
+                    const tasks = weekElement.querySelectorAll('.task-checkbox');
+                    const completed = weekElement.querySelectorAll('.task-checkbox:checked');
+                    
+                    document.getElementById(`week-${i}-progress`).textContent = 
+                        `${completed.length}/${tasks.length} 任务`;
+                }
+            }
+        }
+
+        // 更新统计信息
+        function updateStats() {
+            const allTasks = document.querySelectorAll('.task-checkbox');
+            const completedTasks = document.querySelectorAll('.task-checkbox:checked');
+            const milestones = document.querySelectorAll('.milestone-checkbox:checked');
+            
+            // 计算项目完成数（基于项目相关任务）
+            const projectTasks = [
+                'todo-deploy', 'ecom-deploy', 'dashboard-filter', 
+                'social-responsive', 'portfolio-contact'
+            ];
+            const projectsCompleted = projectTasks.filter(taskId => {
+                const task = document.querySelector(`[data-task="${taskId}"]`);
+                return task && task.checked;
+            }).length;
+            
+            const completionRate = Math.round((completedTasks.length / allTasks.length) * 100);
+            
+            document.getElementById('completion-rate').textContent = completionRate + '%';
+            document.getElementById('projects-completed').textContent = projectsCompleted;
+            document.getElementById('milestones-achieved').textContent = milestones.length;
+            
+            // 估算学习天数（基于任务完成比例）
+            const estimatedDays = Math.ceil((completedTasks.length / allTasks.length) * 90);
+            document.getElementById('days-passed').textContent = Math.max(1, estimatedDays);
+            document.getElementById('current-day').textContent = `Day ${Math.max(1, estimatedDays)}`;
+        }
+
+        // 保存进度到localStorage
+        function saveProgress() {
+            const progress = {};
+            
+            // 保存任务状态
+            document.querySelectorAll('.task-checkbox').forEach(checkbox => {
+                progress[checkbox.getAttribute('data-task')] = checkbox.checked;
+            });
+            
+            // 保存里程碑状态
+            document.querySelectorAll('.milestone-checkbox').forEach(checkbox => {
+                progress[checkbox.getAttribute('data-milestone')] = checkbox.checked;
+            });
+            
+            localStorage.setItem('frontend-job-progress', JSON.stringify(progress));
+        }
+
+        // 从localStorage加载进度
+        function loadProgress() {
+            const saved = localStorage.getItem('frontend-job-progress');
+            if (!saved) return;
+            
+            const progress = JSON.parse(saved);
+            
+            // 恢复任务状态
+            Object.keys(progress).forEach(key => {
+                const element = document.querySelector(`[data-task="${key}"]`) || 
+                               document.querySelector(`[data-milestone="${key}"]`);
+                if (element) {
+                    element.checked = progress[key];
+                }
+            });
+        }
+
+        // 导出进度
+        function exportProgress() {
+            const allTasks = document.querySelectorAll('.task-checkbox');
+            const completedTasks = document.querySelectorAll('.task-checkbox:checked');
+            const milestones = document.querySelectorAll('.milestone-checkbox:checked');
+            
+            const report = `🚀 前端远程工作学习进度报告
+
+📅 生成日期：${new Date().toLocaleDateString()}
+📊 总体进度：${Math.round((completedTasks.length / allTasks.length) * 100)}%
+✅ 已完成任务：${completedTasks.length}/${allTasks.length}
+🏆 达成里程碑：${milestones.length}/15
+
+📈 各月进度：
+第1个月：${Math.round((document.getElementById('month-1').querySelectorAll('.task-checkbox:checked').length / document.getElementById('month-1').querySelectorAll('.task-checkbox').length) * 100)}%
+第2个月：${Math.round((document.getElementById('month-2').querySelectorAll('.task-checkbox:checked').length / document.getElementById('month-2').querySelectorAll('.task-checkbox').length) * 100)}%
+第3个月：${Math.round((document.getElementById('month-3').querySelectorAll('.task-checkbox:checked').length / document.getElementById('month-3').querySelectorAll('.task-checkbox').length) * 100)}%
+
+💡 建议：继续保持学习节奏，专注于未完成的任务！`;
+
+            navigator.clipboard.writeText(report).then(() => {
+                alert('📋 进度报告已复制到剪贴板！');
+            });
+        }
+
+        // 重置进度
+        function resetProgress() {
+            if (confirm('确定要重置所有学习进度吗？此操作不可恢复！')) {
+                localStorage.removeItem('frontend-job-progress');
+                
+                // 取消所有勾选
+                document.querySelectorAll('.task-checkbox, .milestone-checkbox').forEach(checkbox => {
+                    checkbox.checked = false;
+                });
+                
+                updateAllProgress();
+                alert('📝 进度已重置！重新开始您的学习之旅！');
+            }
+        }
+
+
+    </script>
+</body>
+</html> 
