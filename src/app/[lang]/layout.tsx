@@ -87,12 +87,13 @@ const BaiduTrack = () => {
 }
 
 
-// interface Props {
-//   children: ReactNode
-//   params: Promise<{ lang: I18nLangKeys }>
-// }
-
-export default async function RootLayout({ children, params }: LayoutProps<'/[lang]'>) {
+export default async function RootLayout({
+  children,
+  params,
+}: {
+  children: ReactNode
+  params: Promise<{ lang: string }>
+}) {
   const getterParams = await params
 
   const { lang } = getterParams as { lang: I18nLangKeys }
@@ -124,7 +125,7 @@ export default async function RootLayout({ children, params }: LayoutProps<'/[la
         <meta property="og:description" content={description} />
         <link rel="canonical" href={repo} />
       </Head>
-      <body>
+      <body suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

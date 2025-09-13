@@ -1,0 +1,341 @@
+---
+title: "代码示例与语法高亮"
+description: "学习如何在 Nextra 中添加代码示例和语法高亮"
+---
+
+# 💻 代码示例与语法高亮
+
+学习如何在 Nextra 中使用各种代码块和语法高亮功能。
+
+## 📋 基本语法
+
+### 1. 内联代码
+
+使用 \`反引号\` 创建内联代码：`console.log('Hello World')`
+
+### 2. 基本代码块
+
+使用三个反引号创建代码块：
+
+```
+function hello() {
+  console.log('Hello World')
+}
+```
+
+## 🎨 语法高亮
+
+指定语言名称来启用语法高亮：
+
+### JavaScript
+```javascript
+function calculateSum(a, b) {
+  return a + b
+}
+
+const result = calculateSum(5, 3)
+console.log(`结果是: ${result}`)
+```
+
+### TypeScript
+```typescript
+interface User {
+  id: number
+  name: string
+  email?: string
+}
+
+function createUser(name: string): User {
+  return {
+    id: Math.random(),
+    name,
+    email: `${name}@example.com`
+  }
+}
+
+const user: User = createUser('张三')
+```
+
+### React/JSX
+```jsx
+import React, { useState } from 'react'
+
+function Counter() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <div>
+      <h2>计数器: {count}</h2>
+      <button onClick={() => setCount(count + 1)}>
+        增加
+      </button>
+    </div>
+  )
+}
+
+export default Counter
+```
+
+### CSS
+```css
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.button {
+  background: linear-gradient(45deg, #007acc, #0066cc);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+```
+
+### Python
+```python
+def fibonacci(n):
+    """计算斐波那契数列的第n项"""
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+
+# 生成前10项
+for i in range(10):
+    print(f"F({i}) = {fibonacci(i)}")
+```
+
+### Bash/Shell
+```bash
+#!/bin/bash
+
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run dev
+
+# 构建项目
+npm run build
+```
+
+### JSON
+```json
+{
+  "name": "nextra-example",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "nextra": "^4.0.0",
+    "react": "^18.0.0"
+  }
+}
+```
+
+### YAML
+```yaml
+name: Deploy to Production
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+```
+
+## 🔧 高级功能
+
+### 带文件名的代码块
+
+```typescript filename="utils/helpers.ts"
+export function formatDate(date: Date): string {
+  return date.toLocaleDateString('zh-CN', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  })
+}
+
+export function debounce<T extends (...args: any[]) => void>(
+  func: T,
+  delay: number
+): (...args: Parameters<T>) => void {
+  let timeoutId: NodeJS.Timeout
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeoutId)
+    timeoutId = setTimeout(() => func(...args), delay)
+  }
+}
+```
+
+### 高亮特定行
+
+```javascript {2,5-7}
+function processData(data) {
+  console.log('开始处理数据...') // 这行会被高亮
+  
+  const processed = data
+    .filter(item => item.isValid)     // 这些行
+    .map(item => item.value)          // 会被
+    .sort((a, b) => a - b)            // 高亮显示
+  
+  return processed
+}
+```
+
+### 复制按钮
+
+Nextra 会自动为代码块添加复制按钮，用户可以一键复制代码：
+
+```bash copy
+git clone https://github.com/your-repo/project.git
+cd project
+npm install
+npm run dev
+```
+
+### 显示行号
+
+```typescript showLineNumbers
+interface ApiResponse<T> {
+  data: T
+  message: string
+  status: number
+}
+
+async function fetchData<T>(url: string): Promise<ApiResponse<T>> {
+  try {
+    const response = await fetch(url)
+    const data = await response.json()
+    return data
+  } catch (error) {
+    throw new Error(`Failed to fetch data: ${error.message}`)
+  }
+}
+```
+
+## 📝 实际使用案例
+
+### Next.js 页面组件
+
+```tsx filename="pages/index.tsx" showLineNumbers
+import type { NextPage } from 'next'
+import Head from 'next/head'
+import { useState, useEffect } from 'react'
+
+const Home: NextPage = () => {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
+
+  return (
+    <>
+      <Head>
+        <title>我的 Nextra 站点</title>
+        <meta name="description" content="使用 Nextra 构建的文档站点" />
+      </Head>
+      
+      <main>
+        <h1>欢迎使用 Nextra</h1>
+        <p>这是一个功能强大的文档生成器。</p>
+      </main>
+    </>
+  )
+}
+
+export default Home
+```
+
+### API 路由示例
+
+```typescript filename="pages/api/users.ts" {8-12}
+import type { NextApiRequest, NextApiResponse } from 'next'
+
+interface User {
+  id: number
+  name: string
+  email: string
+}
+
+export default function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<User[] | { error: string }>
+) {
+  if (req.method === 'GET') {
+    const users: User[] = [
+      { id: 1, name: '张三', email: 'zhangsan@example.com' },
+      { id: 2, name: '李四', email: 'lisi@example.com' }
+    ]
+    res.status(200).json(users)
+  } else {
+    res.status(405).json({ error: 'Method not allowed' })
+  }
+}
+```
+
+## 🎯 支持的语言
+
+Nextra 支持大量编程语言的语法高亮：
+
+- **Web**: `html`, `css`, `javascript`, `typescript`, `jsx`, `tsx`
+- **后端**: `python`, `java`, `go`, `rust`, `php`, `ruby`
+- **移动端**: `swift`, `kotlin`, `dart`
+- **数据**: `sql`, `graphql`, `json`, `yaml`, `xml`
+- **配置**: `dockerfile`, `nginx`, `apache`
+- **脚本**: `bash`, `powershell`, `batch`
+- **函数式**: `haskell`, `clojure`, `scala`
+
+## 💡 最佳实践
+
+1. **选择正确的语言标识符** - 确保语法高亮正确
+2. **添加文件名** - 帮助读者理解代码上下文
+3. **高亮关键行** - 突出重要的代码部分
+4. **保持代码简洁** - 避免过长的代码块
+5. **添加注释** - 解释复杂的逻辑
+
+## 🔧 配置选项
+
+在 `next.config.js` 中可以配置代码块的默认行为：
+
+```javascript filename="next.config.js"
+const withNextra = require('nextra')({
+  defaultShowCopyCode: true,  // 默认显示复制按钮
+})
+
+module.exports = withNextra({
+  // 其他 Next.js 配置
+})
+```
+
+---
+
+> 💡 **提示**: 这些代码示例展示了 Nextra 强大的代码高亮功能。你可以在任何 `.mdx` 文件中使用这些语法！ 

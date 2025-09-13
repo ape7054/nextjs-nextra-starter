@@ -1,0 +1,51 @@
+---
+title: "测试全局组件"
+---
+
+# 🧪 测试：所有MDX文件都能用全局组件
+
+这个页面证明了 `mdx-components.ts` 中映射的组件在**任何MDX文件**中都可以直接使用！
+
+## 🔄 无需导入的组件
+
+注意：这个文件的顶部**没有任何import语句**，但我仍然可以使用这些组件：
+
+### Button组件
+<Button>我是全局可用的按钮！</Button>
+
+### Alert组件系列
+<Alert>
+  <AlertTitle>全局组件测试</AlertTitle>
+  <AlertDescription>
+    看！我在一个全新的MDX文件中，但仍然可以使用Alert组件，
+    因为它们已经在mdx-components.ts中全局映射了！
+  </AlertDescription>
+</Alert>
+
+## 🎯 这证明了什么？
+
+1. ✅ **任何MDX文件**都能使用映射的组件
+2. ✅ **无需重复导入**组件
+3. ✅ **一次配置，全局使用**
+
+<Alert>
+  <AlertDescription>
+    这就是MDX组件映射的威力 - 让所有文档保持一致的组件体验！
+  </AlertDescription>
+</Alert>
+
+### 多个组件混合使用
+
+<Button>第一个按钮</Button>
+
+这是普通的**Markdown文本**
+
+<Button>第二个按钮</Button>
+
+<Alert>
+  <AlertTitle>总结</AlertTitle>
+  <AlertDescription>
+    mdx-components.ts 就像一个"全局工具箱"，
+    任何MDX文件都可以从中取用工具，无需单独准备！
+  </AlertDescription>
+</Alert> 
