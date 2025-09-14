@@ -1239,61 +1239,138 @@
                     <div class="day-section">
                         <div class="day-title">📅 动画系统学习</div>
                         
-                        <div class="task-group">
-                            <div class="task-group-title">Framer Motion基础：</div>
-                            <div class="task-item">
-                                <input type="checkbox" class="task-checkbox" data-task="motion-basic" aria-label="任务: 学习motion组件的基本用法">
-                                <div class="task-text">学习motion组件的基本用法</div>
+                                                    <div class="task-group">
+                                <div class="task-group-title">Framer Motion基础：</div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="motion-basic" aria-label="任务: 学习motion组件的基本用法">
+                                    <div class="task-text">学习motion组件的基本用法</div>
+                                    <div class="task-ai-section">
+                                        <button class="ai-question-btn" onclick="toggleAIQuestion('motion-basic')">🤖 询问AI</button>
+                                        <div class="ai-question-text" id="ai-motion-basic">
+                                            <button class="copy-btn" onclick="copyToClipboard('ai-motion-basic', this)">复制</button>
+                                            什么是Framer Motion？motion组件如何使用？如何为HTML元素添加基本动画效果？
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="motion-variants" aria-label="任务: 理解动画变体（variants）系统">
+                                    <div class="task-text">理解动画变体（variants）系统</div>
+                                    <div class="task-ai-section">
+                                        <button class="ai-question-btn" onclick="toggleAIQuestion('motion-variants')">🤖 询问AI</button>
+                                        <div class="ai-question-text" id="ai-motion-variants">
+                                            <button class="copy-btn" onclick="copyToClipboard('ai-motion-variants', this)">复制</button>
+                                            Framer Motion的variants是什么？如何定义和使用动画变体？variants系统的优势是什么？
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="motion-gestures" aria-label="任务: 掌握手势和交互动画">
+                                    <div class="task-text">掌握手势和交互动画</div>
+                                    <div class="task-ai-section">
+                                        <button class="ai-question-btn" onclick="toggleAIQuestion('motion-gestures')">🤖 询问AI</button>
+                                        <div class="ai-question-text" id="ai-motion-gestures">
+                                            <button class="copy-btn" onclick="copyToClipboard('ai-motion-gestures', this)">复制</button>
+                                            Framer Motion中如何实现手势交互？拖拽、点击、悬停动画如何实现？手势动画的最佳实践是什么？
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="motion-layout" aria-label="任务: 学习布局动画和共享元素">
+                                    <div class="task-text">学习布局动画和共享元素</div>
+                                    <div class="task-ai-section">
+                                        <button class="ai-question-btn" onclick="toggleAIQuestion('motion-layout')">🤖 询问AI</button>
+                                        <div class="ai-question-text" id="ai-motion-layout">
+                                            <button class="copy-btn" onclick="copyToClipboard('ai-motion-layout', this)">复制</button>
+                                            布局动画是什么？如何实现平滑的布局变化？共享元素动画的实现原理是什么？
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="task-item">
-                                <input type="checkbox" class="task-checkbox" data-task="motion-variants" aria-label="任务: 理解动画变体（variants）系统">
-                                <div class="task-text">理解动画变体（variants）系统</div>
-                            </div>
-                            <div class="task-item">
-                                <input type="checkbox" class="task-checkbox" data-task="motion-gestures" aria-label="任务: 掌握手势和交互动画">
-                                <div class="task-text">掌握手势和交互动画</div>
-                            </div>
-                            <div class="task-item">
-                                <input type="checkbox" class="task-checkbox" data-task="motion-layout" aria-label="任务: 学习布局动画和共享元素">
-                                <div class="task-text">学习布局动画和共享元素</div>
-                            </div>
-                        </div>
 
-                        <div class="task-group">
-                            <div class="task-group-title">粒子效果：</div>
-                            <div class="task-item">
-                                <input type="checkbox" class="task-checkbox" data-task="particles-config" aria-label="任务: 分析tsParticles配置">
-                                <div class="task-text">分析tsParticles配置</div>
+                                                    <div class="task-group">
+                                <div class="task-group-title">粒子效果：</div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="particles-config" aria-label="任务: 分析tsParticles配置">
+                                    <div class="task-text">分析tsParticles配置</div>
+                                    <div class="task-ai-section">
+                                        <button class="ai-question-btn" onclick="toggleAIQuestion('particles-config')">🤖 询问AI</button>
+                                        <div class="ai-question-text" id="ai-particles-config">
+                                            <button class="copy-btn" onclick="copyToClipboard('ai-particles-config', this)">复制</button>
+                                            tsParticles是什么？如何配置粒子效果参数？粒子系统的基本配置项有哪些？
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="particles-custom" aria-label="任务: 自定义粒子效果参数">
+                                    <div class="task-text">自定义粒子效果参数</div>
+                                    <div class="task-ai-section">
+                                        <button class="ai-question-btn" onclick="toggleAIQuestion('particles-custom')">🤖 询问AI</button>
+                                        <div class="ai-question-text" id="ai-particles-custom">
+                                            <button class="copy-btn" onclick="copyToClipboard('ai-particles-custom', this)">复制</button>
+                                            如何自定义粒子形状、颜色、大小？粒子运动轨迹如何控制？如何创建独特的粒子效果？
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="particles-performance" aria-label="任务: 优化粒子动画性能">
+                                    <div class="task-text">优化粒子动画性能</div>
+                                    <div class="task-ai-section">
+                                        <button class="ai-question-btn" onclick="toggleAIQuestion('particles-performance')">🤖 询问AI</button>
+                                        <div class="ai-question-text" id="ai-particles-performance">
+                                            <button class="copy-btn" onclick="copyToClipboard('ai-particles-performance', this)">复制</button>
+                                            粒子动画性能优化的方法有哪些？如何控制粒子数量？Canvas性能优化的技巧是什么？
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="task-item">
-                                <input type="checkbox" class="task-checkbox" data-task="particles-custom" aria-label="任务: 自定义粒子效果参数">
-                                <div class="task-text">自定义粒子效果参数</div>
-                            </div>
-                            <div class="task-item">
-                                <input type="checkbox" class="task-checkbox" data-task="particles-performance" aria-label="任务: 优化粒子动画性能">
-                                <div class="task-text">优化粒子动画性能</div>
-                            </div>
-                        </div>
 
-                        <div class="project-highlight">
-                            <div class="project-title">实战练习：动画组件开发</div>
-                            <div class="task-item">
-                                <input type="checkbox" class="task-checkbox" data-task="create-fade-in" aria-label="任务: 创建页面进入动画组件">
-                                <div class="task-text">创建页面进入动画组件</div>
+                                                    <div class="project-highlight">
+                                <div class="project-title">实战练习：动画组件开发</div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="create-fade-in" aria-label="任务: 创建页面进入动画组件">
+                                    <div class="task-text">创建页面进入动画组件</div>
+                                    <div class="task-ai-section">
+                                        <button class="ai-question-btn" onclick="toggleAIQuestion('create-fade-in')">🤖 询问AI</button>
+                                        <div class="ai-question-text" id="ai-create-fade-in">
+                                            <button class="copy-btn" onclick="copyToClipboard('ai-create-fade-in', this)">复制</button>
+                                            页面进入动画如何设计？淡入效果的实现原理是什么？如何创建可复用的动画组件？
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="create-hover-effects" aria-label="任务: 添加卡片悬停动画效果">
+                                    <div class="task-text">添加卡片悬停动画效果</div>
+                                    <div class="task-ai-section">
+                                        <button class="ai-question-btn" onclick="toggleAIQuestion('create-hover-effects')">🤖 询问AI</button>
+                                        <div class="ai-question-text" id="ai-create-hover-effects">
+                                            <button class="copy-btn" onclick="copyToClipboard('ai-create-hover-effects', this)">复制</button>
+                                            卡片悬停效果如何实现？缩放、阴影、边框动画怎么做？悬停动画的最佳实践是什么？
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="create-loading" aria-label="任务: 制作页面加载动画">
+                                    <div class="task-text">制作页面加载动画</div>
+                                    <div class="task-ai-section">
+                                        <button class="ai-question-btn" onclick="toggleAIQuestion('create-loading')">🤖 询问AI</button>
+                                        <div class="ai-question-text" id="ai-create-loading">
+                                            <button class="copy-btn" onclick="copyToClipboard('ai-create-loading', this)">复制</button>
+                                            加载动画如何设计？常见的Loading效果有哪些？如何实现旋转、脉冲等动画效果？
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task-item">
+                                    <input type="checkbox" class="task-checkbox" data-task="create-scroll-reveal" aria-label="任务: 实现滚动触发动画">
+                                    <div class="task-text">实现滚动触发动画</div>
+                                    <div class="task-ai-section">
+                                        <button class="ai-question-btn" onclick="toggleAIQuestion('create-scroll-reveal')">🤖 询问AI</button>
+                                        <div class="ai-question-text" id="ai-create-scroll-reveal">
+                                            <button class="copy-btn" onclick="copyToClipboard('ai-create-scroll-reveal', this)">复制</button>
+                                            滚动触发动画如何实现？Intersection Observer API的使用方法是什么？滚动动画的性能考虑有哪些？
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="task-item">
-                                <input type="checkbox" class="task-checkbox" data-task="create-hover-effects" aria-label="任务: 添加卡片悬停动画效果">
-                                <div class="task-text">添加卡片悬停动画效果</div>
-                            </div>
-                            <div class="task-item">
-                                <input type="checkbox" class="task-checkbox" data-task="create-loading" aria-label="任务: 制作页面加载动画">
-                                <div class="task-text">制作页面加载动画</div>
-                            </div>
-                            <div class="task-item">
-                                <input type="checkbox" class="task-checkbox" data-task="create-scroll-reveal" aria-label="任务: 实现滚动触发动画">
-                                <div class="task-text">实现滚动触发动画</div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
